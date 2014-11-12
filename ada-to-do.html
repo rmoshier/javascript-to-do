@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ada's To Do List</title>
+  <script>
+    window.onload = init;
+    function init() {
+      var list = document.getElementById("list");
+
+      // var newListItem = document.createElement("li");
+	    // newListItem.innerHTML = "I'm a list item";
+      // list.appendChild(newListItem);
+      //
+      // var newListItem2 = document.createElement("li");
+      // newListItem2.innerHTML = "I'm a second list item";
+      // list.appendChild(newListItem2);
+      //
+      // var newListItem3 = document.createElement("li");
+      // newListItem3.innerHTML = "I'm a third list item";
+      // list.appendChild(newListItem3);
+
+      var button = document.getElementById("addTask");
+      button.onclick = newToDo;
+    }
+
+    function newToDo(){
+      // this is a click event!
+      event.preventDefault();
+      var button = document.getElementById("addTask");
+      var value = button.form.task.value;
+
+      if (verify()) {
+        var list = document.getElementById("list");
+
+        var newListItem4 = document.createElement("li");
+        newListItem4.innerHTML = value;
+
+        list.appendChild(newListItem4);
+
+        button.form.task.value = "";
+      }
+    }
+
+    function verify(){
+      // we are verifying the form here
+      var button = document.getElementById("addTask");
+      if (button.form.task.value === '') {
+        alert('Please enter a task!');
+        return false;
+      } else {
+        return true;
+      }
+    }
+  </script>
+</head>
+<body>
+<header>
+    <h1>Ada's To Do List</h1>
+</header>
+<section>
+    <form>
+        <input type="text" id="task" placeholder="task">
+        <button id="addTask">add</button>
+    </form>
+    <ul id="list">
+
+    </ul>
+</section>
+</body>
+</html>
