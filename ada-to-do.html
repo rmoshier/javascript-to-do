@@ -3,52 +3,24 @@
 <head>
   <meta charset="utf-8">
   <title>Ada's To Do List</title>
-  <script>
-    window.onload = init;
-    function init() {
-      var list = document.getElementById("list");
-
-      for (i = 1; i < 4; i++) {
-        var newListItem = document.createElement("li");
-        newListItem.innerHTML = "I'm list item #" + i;
-        list.appendChild(newListItem);
-      }
-
-      document.getElementById("addTask").onclick = addTask;
- 
-      var button = document.getElementById("addTask");
-      button.onclick = newToDo;
-    }
-
-    function newToDo(){
-      // this is a click event!
-      event.preventDefault();
-      var button = document.getElementById("addTask");
-      var value = button.form.task.value;
-
-      if (verify()) {
-        var list = document.getElementById("list");
-
-        var newListItem4 = document.createElement("li");
-        newListItem4.innerHTML = value;
-
-        list.appendChild(newListItem4);
-
-        button.form.task.value = "";
-      }
-    }
-
-    function verify(){
-      // we are verifying the form here
-      var button = document.getElementById("addTask");
-      if (button.form.task.value === '') {
-        alert('Please enter a task!');
-        return false;
-      } else {
-        return true;
-      }
-    }
-  </script>
+  <script src="ada-to-do.js"></script>
+    <style>
+      header, section form { text-align: center; }
+      body { background-color: #474A50; color: #D27D89; font-family: 'Helvetica' ; }
+      section ul {
+        width: 25%;
+        margin: 2% auto;
+        padding: 2%;
+        text-align: center;
+        background-color: #C5A88F;
+        color: #B7124C;
+        }
+       .done { text-decoration: line-through; }
+      ul { list-style: none; padding-left: 0; }
+      li { padding: 1% 0; }
+      ul input, ul img { margin: 0 5%; }
+      ul img { vertical-align: bottom; }
+   </style>
 </head>
 <body>
 <header>
