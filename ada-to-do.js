@@ -2,6 +2,7 @@ window.onload = init;
 
 function init() {
   var list = document.getElementById("list");
+  var button = document.getElementById("addTask");
 
   for (i = 1; i < 4; i++) {
     var newListItem = document.createElement("li");
@@ -11,7 +12,6 @@ function init() {
 
   document.getElementById("addTask").onclick = addTask;
 
-  var button = document.getElementById("addTask");
   button.onclick = newToDo;
 }
 
