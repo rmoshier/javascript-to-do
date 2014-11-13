@@ -1,0 +1,49 @@
+header, section form {
+  text-align: center;
+}
+
+body {
+  background-color: #474A50;
+  color: #D27D89;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.column1,section ul {
+  width: 25%;
+  margin: 2% auto;
+  padding: 2%;
+  text-align: center;
+  background-color: #C5A88F;
+  color: #B7124C;
+  }
+
+.done {
+  text-decoration: line-through;
+  color: #C57E3A;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  padding: 1% 0;
+}
+
+ul input, ul img {
+  margin: 0 5%;
+}
+
+ul img {
+  vertical-align: bottom;
+}
+
+div ul {
+  width: 25%;
+  margin: 2% auto;
+  padding: 2%;
+  text-align: center;
+  background-color: #C5A88F;
+  color: #B7124C;
+}

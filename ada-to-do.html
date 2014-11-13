@@ -2,39 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Ada's To Do List</title>
+  <title>Casa Bibi To-Do</title>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <script src="new-ada-to-do.js"></script>
-    <style>
-      header, section form { text-align: center; }
-      body { background-color: #474A50; color: #D27D89; font-family: 'Helvetica' ; }
-      section ul {
-        width: 25%;
-        margin: 2% auto;
-        padding: 2%;
-        text-align: center;
-        background-color: #C5A88F;
-        color: #B7124C;
-        }
-       .done { text-decoration: line-through; color: #C57E3A;}
-      ul { list-style: none; padding-left: 0; }
-      li { padding: 1% 0; }
-      ul input, ul img { margin: 0 5%; }
-      ul img { vertical-align: bottom; }
-   </style>
+  <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <link href="ada-to-do.css" media="all" rel="stylesheet">
 </head>
 <body>
 <header>
-    <h1>Ada's To Do List</h1>
+    <h1>Casa Bibi</h1>
+    <img src="img/bibi.png" alt="A picture of Bibi the cat.">
 </header>
 <section>
-    <form>
-        <input type="text" id="task" placeholder="task">
-        <button id="addTask">add</button>
-    </form>
-    <ul id="list">
+    <div class="column1">
+      <h2>To-Do</h2>
+      <form>
+          <input type="text" id="task" placeholder="type a task here!">
+          <button id="addTask">add</button>
+      </form>
+      <ul id="list">
 
-    </ul>
+      </ul>
+    </div>
 </section>
+<div>
+  <ul>
+    <li><a href="http://www.twitter.com/rsmomo">twitter</a></li>
+    <li><a href="http://d-r-i-z-z-l-e.herokuapp.com/">drizzle</a></li>
+  </ul>
+</div>
 </body>
 </html>
