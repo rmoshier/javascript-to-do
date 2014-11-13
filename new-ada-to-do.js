@@ -1,19 +1,20 @@
 $(function () {
 
   for ( i = 1; i < 4; i++ ){
-    $("#list").append("<li>I'm a list item!</li>");
+    $("#list").append("<li>Sample item</li>");
   }
 
-  // var list = document.getElementById("list");
-  // var button = document.getElementById("addTask");
-  //
-  // for (i = 1; i < 4; i++) {
-  //   var newListItem = document.createElement("li");
-  //   newListItem.innerHTML = "I'm list item #" + i;
-  //   list.appendChild(newListItem);
-  // }
+  $("#addTask").click(function() {
+    event.preventDefault();
 
-  document.getElementById("addTask").onclick = addTask;
+    var task = $("#task").val();
 
-  button.onclick = newToDo;
+    if (task !== "null" && task !== "") {
+      var $listItem = $("<li>" + task + "</li>");
+
+      $("#list").append($listItem);
+    }
+
+    document.getElementById("task").value = "";
+  });
 });
