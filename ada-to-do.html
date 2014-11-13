@@ -2,35 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Casa Bibi To-Do</title>
+  <title>Bibi</title>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <script src="new-ada-to-do.js"></script>
   <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
   <link href="ada-to-do.css" media="all" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/bibi_fav.png"/>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> -->
 </head>
 <body>
 <header>
-    <h1>Casa Bibi</h1>
-    <img src="img/bibi.png" alt="A picture of Bibi the cat.">
+    <div class="picture column">
+      <h1>Casa Bibi</h1>
+        <div class="bibi_pic">
+          <img src="img/bibi.png" alt="A picture of Bibi the cat.">
+        </div>
+    </div>
 </header>
 <section>
     <div class="column1">
-      <h2>To-Do</h2>
+      <h2>To Do</h2>
       <form>
           <input type="text" id="task" placeholder="type a task here!">
           <button id="addTask">add</button>
       </form>
-      <ul id="list">
+      <ul id="list" class="list">
+
+      </ul>
+    </div>
+    <div class="column2">
+      <h2>Doing</h2>
+      <ul class="list">
+
+      </ul>
+    </div>
+    <div class="column3">
+      <h2>Done</h2>
+      <ul class="list">
 
       </ul>
     </div>
 </section>
-<div>
-  <ul>
-    <li><a href="http://www.twitter.com/rsmomo">twitter</a></li>
-    <li><a href="http://d-r-i-z-z-l-e.herokuapp.com/">drizzle</a></li>
-  </ul>
-</div>
 </body>
 </html>

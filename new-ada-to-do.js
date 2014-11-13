@@ -1,8 +1,8 @@
   $(function () {
 
-    for ( i = 1; i < 4; i++ ){
-      $("#list").append("<li>Sample item</li>");
-    }
+    // for ( i = 1; i < 4; i++ ){
+    //   $("#list").append("<li>Sample item</li>");
+    // }
 
     $("#addTask").click(function() {
       event.preventDefault();
