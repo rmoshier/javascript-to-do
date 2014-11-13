@@ -6,13 +6,17 @@ $(function () {
 
   $("#addTask").click(function() {
     event.preventDefault();
-
     var task = $("#task").val();
 
     if (task !== "null" && task !== "") {
       var $listItem = $("<li>" + task + "</li>");
 
+      $listItem.click(function(){
+        $(this).toggleClass("done");
+      });
+
       $("#list").append($listItem);
+      $($newListItem).hide().fadeIn("fast");
     }
 
     document.getElementById("task").value = "";
