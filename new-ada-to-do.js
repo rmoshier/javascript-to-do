@@ -18,15 +18,22 @@
           removeCheck();
         });
 
-        $("#list").append($listItem);
+        $("#list1").append($listItem);
         $($listItem).hide().fadeIn("slow");
         $("ul").sortable();
       }
 
     });
 
-    $( "#list" ).click(function() {
-      $( "#li" ).remove();
+  $(function() {
+      $( "#list1" ).draggable();
+      $( "#list2" ).droppable({
+        drop: function( event, ui ) {
+          $( this )
+            .addClass( "ui-state-highlight" )
+            .find( "li" )
+              .html( "Dropped!" );
+        }
+      });
     });
-
   });
