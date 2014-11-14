@@ -8,6 +8,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.list {
+  float: center;
+}
+
 .column1 ,section ul {
   border-radius: 75px 75px 75px 75px;
   width: 25%;
