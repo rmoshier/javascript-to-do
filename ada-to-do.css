@@ -65,6 +65,12 @@ ul input, ul img {
   margin: 0 5%;
 }
 
+a {
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+
 div ul {
   width: 25%;
   margin: 2% auto;
